@@ -40,7 +40,7 @@ drawerState.value = lgAndUp.value && width.value !== 1280
             class="text-h5 font-weight-bold"
             style="line-height: 2rem"
           >
-            Vitify <span class="text-primary">Admin</span>
+            VN <span class="text-primary">Admin</span>
           </v-list-item-title>
         </v-list-item>
       </v-list>
@@ -58,13 +58,6 @@ drawerState.value = lgAndUp.value && width.value !== 1280
             class="font-weight-bold text-primary"
             target="_blank"
             >Yue JIN</a
-          >
-          <span> & </span>
-          <a
-            href="https://www.nustarnuclear.com/"
-            class="font-weight-bold text-primary"
-            target="_blank"
-            >NuStar</a
           >
         </div>
       </v-list-item>

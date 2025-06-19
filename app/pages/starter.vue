@@ -8,7 +8,7 @@ function warning() {
 }
 definePageMeta({
   icon: 'mdi-home',
-  title: 'Homepage',
+  title: 'Opinionated Starter',
   drawerIndex: 0,
 })
 </script>
