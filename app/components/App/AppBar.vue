@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { mergeProps } from 'vue'
 
+import FullScreen from './AppFullScreen.vue'
+import Locale from './AppLocale.vue'
+
 const theme = useTheme()
 const drawer = useState('drawer')
 const route = useRoute()
@@ -25,11 +28,26 @@ const { loggedIn, clear, user } = useUserSession()
 </script>
 
 <template>
-  <v-app-bar flat>
-    <v-app-bar-nav-icon @click="drawer = !drawer" />
+  <v-app-bar elevate-on-scroll flat>
+    <v-btn rounded="0" variant="text" elevation="1" fab small style="z-index: 1" @click="drawer = !drawer">
+      <v-icon variant="text">
+        {{ drawer ? 'mdi-menu-open' : 'mdi-menu-close' }}
+      </v-icon>
+    </v-btn>
     <v-breadcrumbs :items="breadcrumbs" />
     <v-spacer />
     <div id="app-bar" />
+    <FullScreen />
+    <Locale />
+    <v-btn
+      icon
+      href="https://github.com/JV-HUANG/VNAdmin"
+      size="small"
+      class="ml-2"
+      target="_blank"
+    >
+      <v-icon size="30" icon="mdi-github" />
+    </v-btn>
     <v-switch
       v-model="isDark"
       color=""
@@ -40,15 +58,6 @@ const { loggedIn, clear, user } = useUserSession()
       true-icon="mdi-weather-night"
       class="opacity-80"
     />
-    <v-btn
-      icon
-      href="https://github.com/kingyue737/vitify-nuxt"
-      size="small"
-      class="ml-2"
-      target="_blank"
-    >
-      <v-icon size="30" icon="mdi-github" />
-    </v-btn>
     <v-menu location="bottom">
       <template #activator="{ props: menu }">
         <v-tooltip location="bottom">

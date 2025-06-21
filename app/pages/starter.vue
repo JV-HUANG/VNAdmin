@@ -7,7 +7,7 @@ function warning() {
   Notify.warning(`How dare you refuse me, ${name.value}.`)
 }
 definePageMeta({
-  icon: 'mdi-home',
+  icon: 'mdi-smoke-detector-variant-alert',
   title: 'Opinionated Starter',
   drawerIndex: 0,
 })
@@ -25,18 +25,20 @@ definePageMeta({
         color="primary"
         class="mb-4"
       />
-      <p>Opinionated Starter Template</p>
+      <p>{{ $t('description') }}</p>
       <v-text-field
         v-model="name"
         max-width="300"
         placeholder="Hello World"
-        label="What's your name?"
+        :label="$t('inputLabel')"
         class="mt-8"
       />
       <v-btn :disabled="!name" class="mr-2" color="primary" @click="sayHi">
-        Confirm
+        {{ $t('confirm') }}
       </v-btn>
-      <v-btn :disabled="!name" @click="warning"> Cancel </v-btn>
+      <v-btn :disabled="!name" @click="warning">
+        {{ $t('cancel') }}
+      </v-btn>
     </div>
   </v-container>
 </template>

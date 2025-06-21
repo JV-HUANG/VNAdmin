@@ -25,12 +25,9 @@ useSeoMeta({
 
 <template>
   <v-app>
-    <AppDrawer />
-    <AppBar />
-    <v-main>
-      <NuxtPage />
-    </v-main>
-    <AppFooter />
+    <NuxtLayout>
+        <NuxtPage />
+    </NuxtLayout>
   </v-app>
 </template>
 

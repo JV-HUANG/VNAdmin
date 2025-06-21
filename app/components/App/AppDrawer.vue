@@ -40,7 +40,7 @@ drawerState.value = lgAndUp.value && width.value !== 1280
             class="text-h5 font-weight-bold"
             style="line-height: 2rem"
           >
-            VN <span class="text-primary">Admin</span>
+            VN <span class="text-primary">{{ $t('SiteName') }}</span>
           </v-list-item-title>
         </v-list-item>
       </v-list>
@@ -52,13 +52,17 @@ drawerState.value = lgAndUp.value && width.value !== 1280
     <template #append>
       <v-list-item class="drawer-footer px-0 d-flex flex-column justify-center">
         <div class="text-caption pt-6 pt-md-0 text-center text-no-wrap">
-          &copy; Copyright 2023
+          &copy; 2025
           <a
-            href="https://github.com/kingyue737"
+            href="https://github.com/JV-HUANG"
             class="font-weight-bold text-primary"
             target="_blank"
-            >Yue JIN</a
+            >JV HUANG</a
           >
+          <br />
+          {{ $t('Released') }}
+          <br />
+          {{ $t('ICP') }}
         </div>
       </v-list-item>
     </template>

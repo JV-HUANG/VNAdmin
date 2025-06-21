@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Welcome {{ user.name }}</h1>
-    <v-btn size="x-large" @click="logout">Logout</v-btn>
+    <p class="text-h3">{{ $t('hello') }} {{ user.name }}</p>
+    <v-btn size="x-large" prepend-icon="mdi-logout" @click="logout">{{ $t('logout') }}</v-btn>
   </div>
 </template>
 <script setup lang="ts">

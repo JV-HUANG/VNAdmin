@@ -1,4 +1,8 @@
 <script setup lang="ts">
+definePageMeta({
+  layout: 'login'
+})
+
 const { loggedIn, user, fetch: refreshSession } = useUserSession()
 const credentials = reactive({
   email: 'admin@admin.com',
@@ -23,7 +27,12 @@ const visible = ref(false)
 <template>
   <form @submit.prevent="login">
     <v-responsive class="mx-auto" max-width="320">
-
+      <v-icon
+        icon="custom:vitify-nuxt"
+        size="3em"
+        color="primary"
+        class="mb-4"
+      />
       <div class="text-subtitle-1 text-medium-emphasis">Account</div>
       <v-text-field
         density="compact"
@@ -55,10 +64,10 @@ const visible = ref(false)
       <v-btn
         size="x-large"
         type="submit"
-        color="blue"
         variant="tonal"
+        prepend-icon="mdi-login"
         block>
-        Login
+        {{ $t('login') }}
       </v-btn>
     </v-responsive>
   </form>
